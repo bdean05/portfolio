@@ -33,6 +33,9 @@ const TodoList = (props) => {
         setTodos(newTodos)
     }
 
+    const numbers = [1, 2, 3, 4, 5]
+
+    const listNumbers = numbers.map(number => <div>{number}</div>)
     /*
     let user = "Andranik"
     user = "Benjamin"
@@ -48,6 +51,8 @@ const TodoList = (props) => {
             {todos.map((todo, index) => <Todo todoProps={todo} key={index} deleteProps={() => deleteNewTask(index)} />)}
             <input type="text" placeholder="Ajouter une nouvelle tâche" onChange={e => setNewTask(e.target.value)} />
             <button onClick={addNewTask}>Ajouter</button>
+
+            {listNumbers}
         </div>
     )
 }
