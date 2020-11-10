@@ -51,6 +51,7 @@ const TodoList = (props) => {
             {todos.map((todo, index) => <Todo todoProps={todo} key={index} deleteProps={() => deleteNewTask(index)} />)}
             <input type="text" placeholder="Ajouter une nouvelle tâche" onChange={e => setNewTask(e.target.value)} />
             <button onClick={addNewTask}>Ajouter</button>
+
             {listNumbers}
         </div>
     )
